@@ -33,20 +33,6 @@ svg.icon {
   height: 2em;
   width: 2em;
   vertical-align: top;
-  fill: currentColor;
-}
-
-/* Race-specific icon colors */
-.terran-theme svg.icon {
-  fill: var(--color-terran-accent);
-}
-
-.protoss-theme svg.icon {
-  fill: var(--color-protoss-accent);
-}
-
-.zerg-theme svg.icon {
-  fill: var(--color-zerg-accent);
 }
 
 /* Icon spacing in headings */
