@@ -113,3 +113,25 @@
   --transition-normal: 250ms ease;
   --transition-slow: 500ms ease;
 }
+
+/* Light Mode Overrides */
+body.light-mode {
+    --color-background-page: #f8fafc;
+    --color-background-content: #ffffff;
+    --color-background-card: #f1f5f9;
+    --color-background-hover: #e2e8f0;
+    
+    --color-text-primary: #1e293b;
+    --color-text-secondary: #475569;
+    --color-text-muted: #64748b;
+    
+    --color-border-primary: #cbd5e1;
+    --color-border-secondary: #e2e8f0;
+    --color-border-accent: #3b82f6;
+    
+    --color-accent-blue: #2563eb;
+    --color-accent-gold: #d97706;
+    --color-link: #2563eb;
+    --color-link-hover: #1d4ed8;
+    --color-link-visited: #7c3aed;
+}
