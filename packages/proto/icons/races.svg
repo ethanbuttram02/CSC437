@@ -1,5 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg">
   <defs>
+    <symbol id="icon-community" viewBox="0 0 100 100">
+        <g fill="#f59e0b" stroke="#f59e0b">
+            <!-- Chat bubble icon -->
+            <path d="M20 25 Q20 15 30 15 L70 15 Q80 15 80 25 L80 55 Q80 65 70 65 L45 65 L25 80 L25 65 Q20 65 20 55 Z" fill="#f59e0b" opacity="0.8"/>
+            <!-- Inner bubble detail -->
+            <path d="M30 35 L65 35" stroke="#f59e0b" stroke-width="2" stroke-linecap="round"/>
+            <path d="M30 45 L55 45" stroke="#f59e0b" stroke-width="2" stroke-linecap="round"/>
+            <!-- Small dots -->
+            <circle cx="35" cy="55" r="2" fill="#f59e0b"/>
+            <circle cx="45" cy="55" r="2" fill="#f59e0b"/>
+            <circle cx="55" cy="55" r="2" fill="#f59e0b"/>
+        </g>
+    </symbol>
+    
     <symbol id="icon-terran" viewBox="0 0 100 100">
       <g fill="#ef4444" stroke="#ef4444">
         <!-- Crosshair circle -->
