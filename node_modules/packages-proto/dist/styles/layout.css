@@ -26,7 +26,6 @@
   align-items: center;
 }
 
-/* Theme Toggle Button Styles */
 .nav-left {
   display: flex;
   align-items: center;
@@ -45,63 +44,6 @@
 .nav-brand:hover {
   color: var(--color-accent-blue);
   text-shadow: 0 0 12px rgba(59, 130, 246, 0.6);
-}
-
-.theme-toggle {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 2px solid var(--color-border-accent);
-  background: var(--color-background-card);
-  cursor: pointer;
-  transition: all var(--transition-normal);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.theme-toggle:hover {
-  background: var(--color-background-hover);
-  border-color: var(--color-accent-blue);
-  box-shadow: 0 0 12px rgba(59, 130, 246, 0.3);
-  transform: scale(1.05);
-}
-
-.theme-toggle:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
-}
-
-.theme-icon {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  color: var(--color-text-primary);
-  transition: all var(--transition-normal);
-}
-
-/* Default state (dark mode) - show sun icon */
-.sun-icon {
-  opacity: 1;
-  transform: rotate(0deg) scale(1);
-}
-
-.moon-icon {
-  opacity: 0;
-  transform: rotate(180deg) scale(0.5);
-}
-
-/* Light mode state - show moon icon */
-.light-mode .sun-icon {
-  opacity: 0;
-  transform: rotate(-180deg) scale(0.5);
-}
-
-.light-mode .moon-icon {
-  opacity: 1;
-  transform: rotate(0deg) scale(1);
 }
 
 .nav-links {
@@ -253,13 +195,13 @@
 /* Responsive Layout */
 @media (max-width: 768px) {
   .nav-header {
-    padding: var(--space-2) 0; /* Reduce padding from space-4 to space-2 */
-    margin-bottom: var(--space-3); /* Reduce margin from space-6 to space-3 */
+    padding: var(--space-2) 0;
+    margin-bottom: var(--space-3);
   }
   
   .nav-container {
     flex-direction: column;
-    gap: var(--space-2); /* Reduce gap from space-4 to space-2 */
+    gap: var(--space-2);
   }
   
   .nav-left {
@@ -267,21 +209,11 @@
   }
   
   .nav-brand {
-    font-size: var(--font-size-xl); /* Reduce from 2xl to xl */
-  }
-  
-  .theme-toggle {
-    width: 36px;
-    height: 36px;
-  }
-  
-  .theme-icon {
-    width: 18px;
-    height: 18px;
+    font-size: var(--font-size-xl);
   }
   
   .nav-links {
-    gap: var(--space-2); /* Reduce gap from space-3 to space-2 */
+    gap: var(--space-2);
     flex-wrap: wrap;
     justify-content: center;
   }
@@ -304,35 +236,20 @@
 
 @media (max-width: 480px) {
   .nav-header {
-    padding: var(--space-1) 0; /* Even smaller padding on very small screens */
+    padding: var(--space-1) 0;
     margin-bottom: var(--space-2);
   }
   
   .nav-brand {
-    font-size: var(--font-size-lg); /* Even smaller brand text */
-  }
-  
-  .theme-toggle {
-    width: 32px;
-    height: 32px;
-  }
-  
-  .theme-icon {
-    width: 16px;
-    height: 16px;
+    font-size: var(--font-size-lg);
   }
   
   .nav-links {
-    gap: var(--space-1); /* Minimal gap between nav items */
+    gap: var(--space-1);
   }
   
   .nav-link {
-    padding: var(--space-1) var(--space-2); /* Reduce padding from space-2 space-3 */
+    padding: var(--space-1) var(--space-2);
     font-size: var(--font-size-sm);
-  }
-  
-  .nav-link .icon {
-    width: 1.25rem; /* Smaller icons */
-    height: 1.25rem;
   }
 }
