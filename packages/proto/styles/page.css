@@ -27,6 +27,35 @@ body {
   min-height: 100vh;
 }
 
+/* Icon Styles */
+svg.icon {
+  display: inline;
+  height: 2em;
+  width: 2em;
+  vertical-align: top;
+  fill: currentColor;
+}
+
+/* Race-specific icon colors */
+.terran-theme svg.icon {
+  fill: var(--color-terran-accent);
+}
+
+.protoss-theme svg.icon {
+  fill: var(--color-protoss-accent);
+}
+
+.zerg-theme svg.icon {
+  fill: var(--color-zerg-accent);
+}
+
+/* Icon spacing in headings */
+h2 svg.icon,
+h3 svg.icon {
+  margin-right: var(--space-2);
+  vertical-align: middle;
+}
+
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-family-heading);
