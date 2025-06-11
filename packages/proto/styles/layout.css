@@ -189,13 +189,22 @@
 
 /* Responsive Layout */
 @media (max-width: 768px) {
+  .nav-header {
+    padding: var(--space-2) 0; /* Reduce padding from space-4 to space-2 */
+    margin-bottom: var(--space-3); /* Reduce margin from space-6 to space-3 */
+  }
+  
   .nav-container {
     flex-direction: column;
-    gap: var(--space-4);
+    gap: var(--space-2); /* Reduce gap from space-4 to space-2 */
+  }
+  
+  .nav-brand {
+    font-size: var(--font-size-xl); /* Reduce from 2xl to xl */
   }
   
   .nav-links {
-    gap: var(--space-3);
+    gap: var(--space-2); /* Reduce gap from space-3 to space-2 */
     flex-wrap: wrap;
     justify-content: center;
   }
@@ -217,13 +226,27 @@
 }
 
 @media (max-width: 480px) {
+  .nav-header {
+    padding: var(--space-1) 0; /* Even smaller padding on very small screens */
+    margin-bottom: var(--space-2);
+  }
+  
+  .nav-brand {
+    font-size: var(--font-size-lg); /* Even smaller brand text */
+  }
+  
   .nav-links {
-    gap: var(--space-2);
+    gap: var(--space-1); /* Minimal gap between nav items */
   }
   
   .nav-link {
-    padding: var(--space-2) var(--space-3);
+    padding: var(--space-1) var(--space-2); /* Reduce padding from space-2 space-3 */
     font-size: var(--font-size-sm);
+  }
+  
+  .nav-link .icon {
+    width: 1.25rem; /* Smaller icons */
+    height: 1.25rem;
   }
 }
 
