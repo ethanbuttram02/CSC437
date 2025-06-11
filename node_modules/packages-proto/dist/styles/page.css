@@ -1,0 +1,377 @@
+/* page.css - Main stylesheet for StarCraft 2 Guide Website */
+
+/* Import Google Fonts for sci-fi feel */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap');
+@import url('layout.css');
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  color: var(--color-text-primary);
+  background-color: var(--color-background-page);
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(59, 130, 246, 0.1) 0%, transparent 25%),
+    radial-gradient(circle at 75% 75%, rgba(139, 92, 246, 0.1) 0%, transparent 25%);
+  min-height: 100vh;
+}
+
+/* Icon Styles */
+svg.icon {
+  display: inline;
+  height: 2em;
+  width: 2em;
+  vertical-align: top;
+}
+
+/* Icon spacing in headings */
+h2 svg.icon,
+h3 svg.icon {
+  margin-right: var(--space-2);
+  vertical-align: middle;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-heading);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  margin-bottom: var(--space-4);
+  color: var(--color-text-primary);
+}
+
+h1 {
+  font-size: var(--font-size-4xl);
+  text-align: center;
+  margin-bottom: var(--space-8);
+  text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
+h2 {
+  font-size: var(--font-size-3xl);
+  margin-top: var(--space-8);
+  margin-bottom: var(--space-6);
+  border-bottom: 2px solid var(--color-border-accent);
+  padding-bottom: var(--space-2);
+}
+
+h3 {
+  font-size: var(--font-size-2xl);
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-4);
+  color: var(--color-accent-blue);
+}
+
+h4 {
+  font-size: var(--font-size-xl);
+  margin-top: var(--space-5);
+  margin-bottom: var(--space-3);
+  color: var(--color-accent-gold);
+}
+
+p {
+  margin-bottom: var(--space-4);
+  max-width: var(--max-width-text);
+}
+
+/* Links */
+a {
+  color: var(--color-link);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  border-bottom: 1px solid transparent;
+}
+
+a:hover {
+  color: var(--color-link-hover);
+  border-bottom-color: var(--color-link-hover);
+  text-shadow: 0 0 8px rgba(59, 130, 246, 0.6);
+}
+
+a:visited {
+  color: var(--color-link-visited);
+}
+
+/* Layout Container */
+.container {
+  max-width: var(--max-width-content);
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+}
+
+/* Main Content Area */
+main {
+  background-color: var(--color-background-content);
+  border-radius: var(--border-radius-lg);
+  padding: var(--space-8);
+  margin: var(--space-6) auto;
+  max-width: var(--max-width-content);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--color-border-secondary);
+}
+
+/* Navigation and Back Links */
+.back-link {
+  display: inline-block;
+  margin-bottom: var(--space-6);
+  padding: var(--space-2) var(--space-4);
+  background-color: var(--color-background-card);
+  border: 1px solid var(--color-border-primary);
+  border-radius: var(--border-radius-md);
+  transition: all var(--transition-normal);
+}
+
+.back-link:hover {
+  background-color: var(--color-background-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Race-specific Styling */
+.terran-theme {
+  border-left: 4px solid var(--color-terran-accent);
+  background: linear-gradient(135deg, 
+    var(--color-background-content) 0%, 
+    rgba(30, 58, 138, 0.1) 100%);
+}
+
+.protoss-theme {
+  border-left: 4px solid var(--color-protoss-accent);
+  background: linear-gradient(135deg, 
+    var(--color-background-content) 0%, 
+    rgba(245, 158, 11, 0.1) 100%);
+}
+
+.zerg-theme {
+  border-left: 4px solid var(--color-zerg-accent);
+  background: linear-gradient(135deg, 
+    var(--color-background-content) 0%, 
+    rgba(124, 58, 237, 0.1) 100%);
+}
+
+/* Lists */
+ul, ol {
+  margin-bottom: var(--space-4);
+  padding-left: var(--space-6);
+}
+
+li {
+  margin-bottom: var(--space-2);
+  line-height: var(--line-height-relaxed);
+}
+
+/* Build Order Lists */
+ol {
+  background-color: var(--color-background-card);
+  border-radius: var(--border-radius-md);
+  padding: var(--space-4) var(--space-6);
+  border: 1px solid var(--color-border-secondary);
+}
+
+ol li {
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-sm);
+  background-color: var(--color-background-content);
+  margin-bottom: var(--space-1);
+  padding: var(--space-2);
+  border-radius: var(--border-radius-sm);
+  border-left: 3px solid var(--color-accent-blue);
+}
+
+/* Content Sections */
+.build-overview {
+  background-color: var(--color-background-card);
+  border-radius: var(--border-radius-lg);
+  padding: var(--space-6);
+  margin-bottom: var(--space-6);
+  border: 1px solid var(--color-border-secondary);
+  box-shadow: var(--shadow-md);
+}
+
+.build-overview h3 {
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.difficulty-badge {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--border-radius-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.difficulty-beginner {
+  background-color: rgba(34, 197, 94, 0.2);
+  color: #22c55e;
+  border: 1px solid #22c55e;
+}
+
+.difficulty-intermediate {
+  background-color: rgba(245, 158, 11, 0.2);
+  color: #f59e0b;
+  border: 1px solid #f59e0b;
+}
+
+.difficulty-advanced {
+  background-color: rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+  border: 1px solid #ef4444;
+}
+
+/* Advantage/Disadvantage Lists */
+.advantages, .disadvantages {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+}
+
+.advantages ul, .disadvantages ul {
+  background-color: var(--color-background-content);
+  border-radius: var(--border-radius-md);
+  padding: var(--space-4);
+  margin: 0;
+}
+
+.advantages h4 {
+  color: #22c55e;
+  margin-bottom: var(--space-2);
+}
+
+.disadvantages h4 {
+  color: #ef4444;
+  margin-bottom: var(--space-2);
+}
+
+.advantages li:before {
+  content: "✓ ";
+  color: #22c55e;
+  font-weight: var(--font-weight-bold);
+  margin-right: var(--space-1);
+}
+
+.disadvantages li:before {
+  content: "✗ ";
+  color: #ef4444;
+  font-weight: var(--font-weight-bold);
+  margin-right: var(--space-1);
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-md);
+  margin: var(--space-4) 0;
+}
+
+/* Image Gallery for Race Selection */
+.race-gallery {
+  display: flex;
+  gap: var(--space-4);
+  margin: var(--space-6) 0;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.race-gallery img {
+  width: 300px;
+  height: 150px;
+  object-fit: cover;
+  border: 2px solid var(--color-border-secondary);
+  transition: all var(--transition-normal);
+}
+
+.race-gallery img:hover {
+  transform: scale(1.05);
+  border-color: var(--color-border-accent);
+  box-shadow: var(--shadow-glow);
+}
+
+/* Strong/Bold Text */
+strong {
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+/* Code and Monospace */
+code {
+  font-family: var(--font-family-mono);
+  background-color: var(--color-background-card);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-sm);
+  border: 1px solid var(--color-border-secondary);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  main {
+    margin: var(--space-4);
+    padding: var(--space-4);
+  }
+  
+  .advantages, .disadvantages {
+    grid-template-columns: 1fr;
+  }
+  
+  .race-gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  h1 {
+    font-size: var(--font-size-3xl);
+  }
+  
+  h2 {
+    font-size: var(--font-size-2xl);
+  }
+}
+
+/* Hover Effects and Interactions */
+.build-overview:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-border-accent);
+}
+
+/* Focus States for Accessibility */
+a:focus, button:focus {
+  outline: 2px solid var(--color-accent-blue);
+  outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+  
+  main {
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+  
+  .back-link {
+    display: none;
+  }
+}
